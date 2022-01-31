@@ -224,5 +224,5 @@ SIMPLE_JWT = {
 }
 
 
-CSRF_TRUSTED_ORIGINS = ['http://49.50.165.150:8023']
-# CSRF_TRUSTED_ORIGINS = ['https://site7.public.dhlee.org']
+# CSRF_TRUSTED_ORIGINS = ['http://49.50.165.150:8023']
+CSRF_TRUSTED_ORIGINS = ['https://site7.public.dhlee.org/']
