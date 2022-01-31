@@ -6,13 +6,13 @@ docker exec python__2 pkill "gunicorn"
 docker exec python__2 bash -c "cd /data/site_projects/python__2/src/ ; git pull origin master"
 
 # 의존성 설치
-docker exec python__2 bash -c "cd /data/site_projects/python__2/src/ ; pip install -r requirements/prod.txt"
+docker exec python__2 bash -c "cd /data/site_projects/python__2/src/ ; pip install -r requirements.txt"
 
 # 마이그레이트
-docker exec python__2 bash -c "cd /data/site_projects/python__2/src/ ; python manage.py migrate --settings=base.settings.prod"
+docker exec python__2 bash -c "cd /data/site_projects/python__2/src/ ; python manage.py migrate"
 
 # static collect 다시 수행
-docker exec -it python__2 bash -c "cd /data/site_projects/python__2/src ; echo yes | python manage.py collectstatic --settings=base.settings.prod"
+docker exec -it python__2 bash -c "cd /data/site_projects/python__2/src ; echo yes | python manage.py collectstatic"
 
 # 장고를 운영모드로 실행
 docker exec python__2 bash -c "cd /data/site_projects/python__2/src ; nohup gunicorn --bind=0.0.0.0:8000 base.wsgi &"
