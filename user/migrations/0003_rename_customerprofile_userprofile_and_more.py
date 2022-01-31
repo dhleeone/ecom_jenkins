@@ -2,6 +2,7 @@
 
 from django.conf import settings
 from django.db import migrations
+from ..gen_master_data import gen_master
 
 
 class Migration(migrations.Migration):
@@ -19,4 +20,5 @@ class Migration(migrations.Migration):
         migrations.DeleteModel(
             name='SellerProfile',
         ),
+        migrations.RunPython(gen_master),
     ]
