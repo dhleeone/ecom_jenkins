@@ -3,7 +3,7 @@
 docker exec python__2 pkill "gunicorn"
 
 # 폴더에 깃에 있는 최신소스코드 가져오기
-docker exec python__2 bash -c "cd /data/site_projects/python__2/src/ ; git pull origin master"
+docker exec python__2 bash -c "cd /data/site_projects/python__2/src/ ; git pull origin main"
 
 # 의존성 설치
 docker exec python__2 bash -c "cd /data/site_projects/python__2/src/ ; pip install -r requirements.txt"
