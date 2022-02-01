@@ -174,7 +174,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+STATIC_ROOT=os.path.join(BASE_DIR,"/static/")#correct
+
+#STATICFILES_DIRS = ( os.path.join('static'), )
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
@@ -184,9 +187,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # CKEDITOR
 CKEDITOR_UPLOAD_PATH = 'uploads/'
 CKEDITOR_IMAGE_BACKEND = "pillow"
-
-# Static files (CSS, JavaScript, Images)
-STATICFILES_DIRS = ( os.path.join('static'), )
 
 
 # 미디어 파일을 관리할 루트 media 디렉터리
