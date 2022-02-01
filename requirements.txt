@@ -9,4 +9,3 @@ bootstrap4
 djangorestframework
 django-cors-headers == 3.11.0
 djangorestframework-simplejwt
-django-dotenv
