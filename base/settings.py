@@ -205,7 +205,7 @@ LOGOUT_REDIRECT_URL = '/'
 
 
 # 카카오톡 소셜 로그인 리다이렉트 설정
-SITE_ID = 1
+SITE_ID = 6
 LOGIN_REDIRECT_URL = '/'  # 로그인 후 리다이렉트 될 경로
 
 
