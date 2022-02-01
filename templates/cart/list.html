@@ -18,10 +18,10 @@
         <li class="list-group-item d-flex justify-content-between align-items-start">
             <div style="display:flex; margin-top:5px;">
                 <a href="{{cart.inventory.product.get_absolute_url}}">
-                    {% if product.image.url == True %}
-                    <img class="cart_img" src="{{cart.inventory.product.image.url}}">
-                    {% else %}
+                    {% if product.image_url == True %}
                     <img class="cart_img" src="{{cart.inventory.product.image_url}}">
+                    {% else %}
+                    <img class="cart_img" src="{{cart.inventory.product.image.url}}">
                     {% endif %}
                 </a>
                 <div>
