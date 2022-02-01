@@ -193,10 +193,12 @@ CKEDITOR_IMAGE_BACKEND = "pillow"
 
 
 # 미디어 파일을 관리할 루트 media 디렉터리
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+STATICFILES_DIRS = [
+    BASE_DIR / 'base/static',
+]
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
-STATICFILES_DIRS = [ os.path.join(BASE_DIR, "static"), ]
-#MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_ROOT = BASE_DIR / 'media'
 
 # 로그아웃시 이동하는 URL
 LOGOUT_REDIRECT_URL = '/'
