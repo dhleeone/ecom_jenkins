@@ -26,10 +26,10 @@
         <div class="col-2">
             <div class="item_body">
                 <div class="item_box">
-                    {% if product.image.url == True %}
-                    <a href="{{product.get_absolute_url}}"><img class="item_img" src="{{product.image.url}}"></a>
-                    {% else %}
+                    {% if product.image_url == True %}
                     <a href="{{product.get_absolute_url}}"><img class="item_img" src="{{product.image_url}}"></a>
+                    {% else %}
+                    <a href="{{product.get_absolute_url}}"><img class="item_img" src="{{product.image.url}}"></a>
                     {% endif %}
                     <div class="item_first_row">
                         <div class="price_tag">
