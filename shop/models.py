@@ -4,10 +4,6 @@ from django.urls import reverse
 from django.contrib.auth.models import User
 from django.utils.text import slugify
 
-from urllib.parse import urlparse
-from django.core.files import File
-from utils.file import download, get_buffer_ext
-
 # Create your models here.
 class Category(models.Model):
     name = models.CharField(max_length=200)
